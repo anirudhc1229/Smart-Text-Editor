@@ -563,6 +563,13 @@ def main():
 
     while True:
 
+        tasks = [wordCharCount, 
+                 findAndReplace, 
+                 smartReplace, 
+                 spellCheck, 
+                 grammarCheck, 
+                 plagCheck]
+        
         task = tryExInt("\nTasks:\n\t"
                        "1: Word/Character Count\n\t"
                        "2: Find and Replace\n\t"
@@ -572,19 +579,9 @@ def main():
                        "6: Plagiarism Detection (BETA)\n\t"
                        "7: Print Document\n\t"
                        "8: Finish\n")
-
-        if task == 1:
-            wordCharCount()
-        elif task == 2:
-            findAndReplace()
-        elif task == 3:
-            smartReplace()
-        elif task == 4:
-            spellCheck()
-        elif task == 5:
-            grammarCheck()
-        elif task == 6:
-            plagCheck()
+        
+        if task <= len(tasks):
+            tasks[task - 1]()
         elif task == 7:
             print("\n" + text())
         else:
