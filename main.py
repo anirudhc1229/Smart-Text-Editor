@@ -557,7 +557,6 @@ def tryExInt(prompt):
 
 def main():
 
-    pyDict = PyDictionary()
     input("\n~~~TextEditor.py~~~\nClick ENTER to continue: ")
     getInp()
 
